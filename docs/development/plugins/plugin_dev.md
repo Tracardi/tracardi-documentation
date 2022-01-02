@@ -93,7 +93,7 @@ Although it is an easy way to load the plugin we want it to auto load and instal
 
 ## Plugin auto loading
 
-In the tracardi api source code go to file `app/setup/on_start.py` and find:
+In the Tracardi api source code go to file `app/setup/on_start.py` and find:
 
 
 ```python
@@ -105,17 +105,43 @@ async def add_plugins():
     ]
 ```
 
-and add `tracardi.process_engine.action.v1.hello_world` at the end of the list.
+and add `tracardi.process_engine.action.v1.hello_world` at the end of the list. Restart Tracardi.
 
-Plugin that once has been registered it will not register unless the version the version of 
+Plugin that has been registered once will not register again unless the version of 
 the plugin has changes. 
 
 This course of action, while correct, can be very burdensome for a developer. However, this can be remedied. Just set 
-the RESET_PLUGIN environment variable to yes when you start Tracardi docker container. 
+the RESET_PLUGIN environment variable to yes when you start Tracardi docker container. It will register plugins
+with every restart of Tracardi.
 
 
 
 ## Plugin life-cycle
+
+Plug-ins go through the life cycle of being built, made, and recycled.
+The workflow controls this process. After the workflow is created, the system recognizes which classes 
+will be needed to start the process. Then all classes for the plugins are created. This is called initailiaztion.
+
+### Initialization
+
+Workflow loops up all the nodes in the graph and checks if the plugin class for the node exists. 
+Then checks if it has a static factory method called `build`. If so, the `build` method is run with 
+the `plug-in's configuration data`. This method must return the plug-in instance.
+
+If the factory method does not exist then the object is created the old way. The `__init__` constructor is called.
+
+There is not defined order of execution for plugins initialization.
+
+### Run time
+
+Workflow sorts the execution graph and finds out the order of execution for each node in the graph. Then it calls
+the `run` method on each node. It passes the data from node to node. 
+
+
+## Node internal state
+
+
+
 
 ## Scaffold builder
 
