@@ -14,3 +14,5 @@ Below you will find information how to write plug-ins and how to install them in
 * Plug-in must extend `ActionRunner` class.
 * Resources that need closing should be closed in `close()` method.
 * Static method `build` should be used to initiate async objects.
+* Plugin can not have more then 1 input port
+* Plugin can have 0 or more output ports.
