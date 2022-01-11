@@ -8,7 +8,7 @@ We use a ReactJs template repo for new ReactJs app.
 To start developing Micro Frontend App use the tracardi-uix-template on http://github.com/tracardi/tracardi-uix-template
 
 1. Goto http://github.com/tracardi/tracardi-uix-template
-2. Click button Use this template
+2. Click the button: "Use this template"
 3. Enter the name of your repository
 
 This will create a repo with files needed to start working on the app.
