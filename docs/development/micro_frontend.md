@@ -20,7 +20,7 @@ create a repo that you can fork.
 
 ## Building micro frontend app
 
-Once you have repo cloned create a regular react js component in the root src folder, import it in the App.js folder to
+Once you have cloned the repo, create a regular react js component in the root src folder, import it in the App.js folder to
 see the changes. Most apps triggered on the customers pages are popup apps so make sure you use some popup canvas, or a
 drawer where you place your app.
 
