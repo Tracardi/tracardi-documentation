@@ -92,7 +92,7 @@ when the app s loaded.
 
 ## Passing data from Tracardi to micro app
 
-The micro app may need configuration. For example the pop-up message app needs message and maybe location of the pop-up
+The micro app may need configuration. For example the pop-up message app needs a message and maybe the location of the pop-up
 window. To configure the app and pass data from Tracardi use `data attributes`. It can be done in `src/App.js`
 
 === "src/App.js"
