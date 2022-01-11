@@ -8,7 +8,7 @@ We use a ReactJs template repo for new ReactJs app.
 To start developing Micro Frontend App use the tracardi-uix-template on http://github.com/tracardi/tracardi-uix-template
 
 1. Goto http://github.com/tracardi/tracardi-uix-template
-2. Click button Use this template
+2. Click the button: "Use this template"
 3. Enter the name of your repository
 
 This will create a repo with files needed to start working on the app.
@@ -20,7 +20,7 @@ create a repo that you can fork.
 
 ## Building micro frontend app
 
-Once you have repo cloned create a regular react js component in the root src folder, import it in the App.js folder to
+Once you have cloned the repo, create a regular react js component in the root src folder, import it in the App.js folder to
 see the changes. Most apps triggered on the customers pages are popup apps so make sure you use some popup canvas, or a
 drawer where you place your app.
 
@@ -92,7 +92,7 @@ when the app s loaded.
 
 ## Passing data from Tracardi to micro app
 
-The micro app may need configuration. For example the pop-up message app needs message and maybe location of the pop-up
+The micro app may need configuration. For example the pop-up message app needs a message and maybe the location of the pop-up
 window. To configure the app and pass data from Tracardi use `data attributes`. It can be done in `src/App.js`
 
 === "src/App.js"
